@@ -1,0 +1,115 @@
+h1 {
+    color: black;
+  }
+/* Style for dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style for dropdown title */
+  .dropdown-title {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  /* Style for dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 5px; /* adjust this value to shift dropdown to the left */
+  }
+  
+  /* Show dropdown content when hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Style for dropdown items */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Style for dropdown items on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Style for arrow */
+  .dropdown-title::after {
+    content: "\25BC"; /* Unicode for down arrow */
+    margin-left: 5px;
+  }
+  
+  /* Style for arrow when dropdown is open */
+  .dropdown:hover .dropdown-title::after {
+    content: "\25B2"; /* Unicode for up arrow */
+  }
+  body {
+    /* Fallback for older browsers */
+    background-color: #a5a4ff;
+    /* Gradient background */
+    background-image: linear-gradient(to bottom right, #a5a4ff, #8f69ff, #78ccf0);
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin-top as needed */
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  .search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #ffffff;
+  }
+  img {
+    padding: 10px; /* Adjust padding value as needed */
+}
+
+.search-button { cursor: pointer; height: 17px; width: 24px; }
+.get-started-button {
+  background-color: white;
+  color: #553CF1; /* Purple color */
+  border: 2px solid #553CF1; /* Purple border */
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure it spans the full width */
+}
+
+.get-started-button:hover {
+  background-image: linear-gradient(to right, #5b43c9, #4f4dcc); /* Light blue to light purple gradient */
+  color: white; /* White text color */
+}
+
+
