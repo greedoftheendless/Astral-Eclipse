@@ -1,10 +1,20 @@
+html, body {
+    height: 100%; /* Set the height of both HTML and body to cover the entire viewport */
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
 body {
-    /* Fallback for older browsers */
-    background-color: #a5a4ff;
     /* Gradient background */
     background-image: linear-gradient(to bottom right, #a5a4ff, #b5a2ef, #78ccf0);
-  }
-  header {
+    background-size: cover; /* Ensure the background covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Fix the background relative to the viewport */
+    font-family: Arial, sans-serif;
+}
+
+ 
+ header {
     background-color: #ffffff;
     color: #fff;
     padding: 0px;
@@ -26,4 +36,64 @@ nav a {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+}
+.get-started-button {
+    background-color: white;
+    color: #553CF1; /* Purple color */
+    border: 2px solid #553CF1; /* Purple border */
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure it spans the full width */
+  }
+  
+  .get-started-button:hover {
+    background-image: linear-gradient(to right, #5b43c9, #4f4dcc); /* Light blue to light purple gradient */
+    color: white; /* White text color */
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: #2980b9;
 }
