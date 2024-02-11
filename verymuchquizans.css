@@ -1,0 +1,29 @@
+body {
+    /* Fallback for older browsers */
+    background-color: #a5a4ff;
+    /* Gradient background */
+    background-image: linear-gradient(to bottom right, #a5a4ff, #b5a2ef, #78ccf0);
+  }
+  header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+}
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    margin: 0 10px;
+    color: #553CF1;
+    text-decoration: none;
+}
+.ans {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

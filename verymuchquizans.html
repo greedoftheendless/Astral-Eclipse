@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="verymuchquizans.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Result</title>
+  </head>
+  <body>
+    <header>
+        <img src="infovault1.jpg" alt="InfoVault" width="400" height="100">
+        <p>Your Educational Resource</p>
+    </header>
+    <section class="ans">    
+    <h1>Quiz Result</h1>
+    <div id="result"></div>
+
+    <script>
+      // Parse the query parameters to get the score
+      const urlParams = new URLSearchParams(window.location.search);
+      const score = parseInt(urlParams.get("score"));
+      const totalQuestions = parseInt(urlParams.get("total"));
+      const percentage = parseFloat(urlParams.get("percentage"));
+
+      // Display the result
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `<p>Your score: ${score}/${totalQuestions}</p>`;
+      resultDiv.innerHTML += `<p>Percentage: ${percentage.toFixed(2)}%</p>`;
+    </script>
+</section>
+  </body>
+</html>
