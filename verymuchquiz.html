@@ -31,11 +31,20 @@
             <p>Fibres are:</p>
             <ul>
                 <li><input type="radio" id="q1a1" name="q1"><label for="q1a1">All of these</label></li>
-                <li><input type="radio" id="q1a2" name="q1"><label for="q1a2">Natural </label></li>
+                <li><input type="radio" id="q1a2" name="q1"><label for="q1a2">Natural</label></li>
                 <li><input type="radio" id="q1a3" name="q1"><label for="q1a3">Artificial</label></li>
                 <li><input type="radio" id="q1a4" name="q1"><label for="q1a4">Synthetic</label></li>
             </ul>
-            <!-- Questions 2 to 9 -->
+        </section>
+        <!-- Add more sections for other questions -->
+        <section class="question">
+            <h2>Question 2</h2>
+            <p>Next question goes here...</p>
+            <ul>
+                <li><input type="radio" id="q2a1" name="q2"><label for="q2a1">Option 1</label></li>
+                <li><input type="radio" id="q2a2" name="q2"><label for="q2a2">Option 2</label></li>
+                <!-- Add more options as needed -->
+            </ul>
         </section>
     </main>
     <footer>
@@ -44,18 +53,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Function to calculate the quiz score
             function calculateScore() {
                 let score = 0;
 
-                // Loop through each question
                 for (let i = 1; i <= 10; i++) {
                     const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
                     if (selectedAnswer) {
                         const selectedValue = selectedAnswer.getAttribute('id');
                         const correctAnswer = `q${i}a1`; // Assuming the first option is always correct
 
-                        // Check if the selected answer is correct
                         if (selectedValue === correctAnswer) {
                             score++;
                         }
@@ -65,17 +71,14 @@
                 return score;
             }
 
-            // Function to handle quiz submission
             function handleSubmit() {
                 const score = calculateScore();
                 const totalQuestions = 10;
                 const percentage = (score / totalQuestions) * 100;
 
-                // Redirect to the result page with the score as a query parameter
                 window.location.href = `result_page.html?score=${score}&total=${totalQuestions}&percentage=${percentage}`;
             }
 
-            // Event listener for submit button click
             document.getElementById('submit').addEventListener('click', handleSubmit);
         });
     </script>
