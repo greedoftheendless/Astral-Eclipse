@@ -5,15 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Loop through each question
         for (let i = 1; i <= 10; i++) {
-            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
-            if (selectedAnswer) {
-                const selectedValue = selectedAnswer.getAttribute('id');
-                const correctAnswer = `q${i}a1`; // Assuming the first option is always correct
+            // Assuming the first option is always correct
+            const correctAnswer = `q${i}a1`;
 
-                // Check if the selected answer is correct
-                if (selectedValue === correctAnswer) {
-                    score++;
-                }
+            // Check if the first option is selected
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer && selectedAnswer.getAttribute('id') === correctAnswer) {
+                score++;
             }
         }
 
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const percentage = (score / totalQuestions) * 100;
 
         // Redirect to the result page with the score as a query parameter
-        window.location.href = `quiz_result.html?score=${score}&total=${totalQuestions}&percentage=${percentage}`;
+        window.location.href = `result_page.html?score=${score}&total=${totalQuestions}&percentage=${percentage}`;
     }
 
     // Event listener for submit button click
