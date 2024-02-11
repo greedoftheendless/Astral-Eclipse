@@ -59,7 +59,7 @@ h1 {
     /* Fallback for older browsers */
     background-color: #a5a4ff;
     /* Gradient background */
-    background-image: linear-gradient(to bottom right, #a5a4ff, #8f69ff, #78ccf0);
+    background-image: linear-gradient(to bottom right, #a5a4ff, #b5a2ef, #78ccf0);
   }
   .search-container {
     display: flex;
@@ -111,5 +111,4 @@ h1 {
   background-image: linear-gradient(to right, #5b43c9, #4f4dcc); /* Light blue to light purple gradient */
   color: white; /* White text color */
 }
-
 
