@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="verymuchquizans.css">
+    <link rel="stylesheet" href="verymuchquizans.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Result</title>
+    <style>
+      .answer-key-button {
+        display: block;
+        margin-top: 10px; /* Adjust as needed */
+        width: 200px; /* Adjust as needed */
+        height: 40px; /* Adjust as needed */
+        background-color: white; /* White background */
+        color: #007bff; /* Same color as "Start Learning" button */
+        font-family: Arial, sans-serif; /* Same font family as "Start Learning" button */
+        font-size: 16px; /* Same font size as "Start Learning" button */
+        border: 1px solid #007bff; /* Same border as "Start Learning" button */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .answer-key-button:hover {
+        background-color: #007bff; /* Blue background on hover */
+        color: white; /* White text on hover */
+      }
+    </style>
   </head>
   <body>
     <header>
-        <a href="nexus.html">
-            <img src="infovault1.jpg" alt="InfoVault" width="400" height="100">
-        </a>        
-        <p>Your Educational Resource</p>
+      <a href="nexus.html">
+        <img src="infovault1.jpg" alt="InfoVault" width="400" height="100" />
+      </a>
+      <p>Your Educational Resource</p>
     </header>
-    <section class="ans">    
-    <h1>Quiz Result</h1>
-    <div id="result"></div>
+    <section class="ans">
+      <h1>Quiz Result</h1>
+      <div id="result"></div>
 
-    <script>
-      // Parse the query parameters to get the score
-      const urlParams = new URLSearchParams(window.location.search);
-      const score = parseInt(urlParams.get("score"));
-      const totalQuestions = parseInt(urlParams.get("total"));
-      const percentage = parseFloat(urlParams.get("percentage"));
+      <script>
+        // Parse the query parameters to get the score
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = parseInt(urlParams.get("score"));
+        const totalQuestions = parseInt(urlParams.get("total"));
+        const percentage = parseFloat(urlParams.get("percentage"));
 
-      // Display the result
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = `<p>Your score: ${score}/${totalQuestions}</p>`;
-      resultDiv.innerHTML += `<p>Percentage: ${percentage.toFixed(2)}%</p>`;
-    </script>
-</section>
-<button class="get-started-button" onclick="window.location.href='verymuchsubject.html'">Start learning!</button>
+        // Display the result
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<p>Your score: ${score}/${totalQuestions}</p>`;
+        resultDiv.innerHTML += `<p>Percentage: ${percentage.toFixed(2)}%</p>`;
+      </script>
+    </section>
+    <button
+      class="get-started-button"
+      onclick="window.location.href='verymuchsubject.html'"
+    >
+      Start learning!
+    </button>
+    <button
+      class="answer-key-button"
+      onclick="window.location.href='your_answer_key_page.html'"
+    >
+      Answer Key
+    </button>
   </body>
 </html>
+
