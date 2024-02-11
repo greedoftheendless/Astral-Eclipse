@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const percentage = (score / totalQuestions) * 100;
 
         // Redirect to the result page with the score as a query parameter
-        window.location.href = `result_page.html?score=${score}&total=${totalQuestions}&percentage=${percentage}`;
+        window.location.href = `verymuchquizans.html?score=${score}&total=${totalQuestions}&percentage=${percentage}`;
     }
 
     // Event listener for submit button click
